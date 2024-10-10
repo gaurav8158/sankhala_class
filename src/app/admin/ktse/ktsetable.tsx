@@ -142,7 +142,7 @@ export const columns: ColumnDef<Student>[] = [
   {
     accessorKey: "transactionImage",
     header: "Transaction Image",
-    cell: ({ row }) => <KtseDialogClose imageSrc={mainlogo} />,
+    cell: () => <KtseDialogClose imageSrc={mainlogo} />,
   },
   {
     accessorKey: "discountCoupon",
