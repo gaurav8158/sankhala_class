@@ -175,7 +175,7 @@ export default function ExamForm() {
     setFieldValue("school", selectedSchool);
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-400 lg:pt-10 sm:pb-10">
+    <div className="min-h-screen flex items-center justify-center  lg:pt-10 sm:pb-10">
       <div className="w-full max-w-3xl p-8 py-12 border border-gray-300 shadow-lg lg:rounded-2xl bg-white transform transition duration-500 hover:shadow-2xl">
         <h2 className="text-3xl font-bold text-center text-[#0068B4] mb-6">
           KTSE 2024 ONLINE REGISTRATION FORM
@@ -218,11 +218,22 @@ export default function ExamForm() {
                   Class
                 </label>
                 <Field
+                  as="select"
                   id="class"
                   name="class"
-                  type="text"
                   className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300"
-                />
+                >
+                  <option value="">Select a class</option>
+                  <option value="6th">6th</option>
+                  <option value="7th">7th</option>
+                  <option value="8th">8th</option>
+                  <option value="9th">9th</option>
+                  <option value="10th">10th</option>
+                  <option value="11th Medical">11th Medical</option>
+                  <option value="11th Non medical">11th Non medical</option>
+                  <option value="12th Medical">12th Medical</option>
+                  <option value="12th Non medical">12th Non medical</option>
+                </Field>
                 <ErrorMessage
                   name="class"
                   component="p"

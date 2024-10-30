@@ -4,19 +4,25 @@ import KTSEinfo from "./whyktse";
 import Header from "@/components/Header/page";
 import Notification from "@/components/Notification";
 import { Footer } from "@/components/Footer/page";
-
+import prizetop30 from "../../../Public/KTSE/prizetop30.png";
+import KtseFooter from "./ktsefooter";
+import NIFAAinfo from "./whatnifaa";
+import KtseFAQ from "./faqktse";
 const page = () => {
   return (
     <div>
-      <div className="w-full fixed top-0 left-0 right-0 z-50">
+      {/* <div className="w-full fixed top-0 left-0 right-0 z-50">
         <Notification />
         <Header />
-      </div>
-      <div className="mt-40 ">
+      </div> */}
+      <div className=" min-h-screen ktsebackground py-10">
         <KTSEinfo />
+        <NIFAAinfo/>
         <ExamForm />
+        <KtseFAQ/>
       </div>
-      <Footer />
+
+      <KtseFooter />
     </div>
   );
 };

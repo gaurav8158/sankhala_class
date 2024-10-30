@@ -4,9 +4,10 @@ import mainlogo from "../../../Public/Homepage/mainlogosankhala.jpg";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
+
 export function Footer() {
   return (
-    <footer className="bg-[#0068B4] text-white py-10 ">
+    <footer className="bg-[#0068B4] text-white py-10">
       {/* Upper Section */}
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-2">
         {/* About SANKHALA */}
@@ -35,10 +36,6 @@ export function Footer() {
         <div>
           <h2 className="text-lg font-semibold mb-4">Useful Links</h2>
           <ul>
-            {/* <li>Fee Chart</li>
-            <li>Scholarship</li> */}
-            {/* <li>Photo Gallery</li>
-            <li>Blog</li> */}
             <li>
               <Link href="shippingdelivery">shipping and delivery</Link>
             </li>
@@ -57,10 +54,7 @@ export function Footer() {
         <div>
           <h2 className="text-lg font-semibold mb-4">Websites</h2>
           <ul>
-            <li>CHS Sikar</li>
-            <li>CIS School</li>
-            <li>KVM School</li>
-            <li>SANKHALA NDA Academy</li>
+            <li>Sankhala Classes</li>
           </ul>
         </div>
 
@@ -89,37 +83,72 @@ export function Footer() {
             className="mx-auto md:mx-0"
           />
         </div>
-        {/* location section */}
-        <div className="flex items-center  gap-4 text-left">
+        {/* Location Section */}
+        <div className="flex items-center gap-4 text-left">
           <Icon icon="tdesign:location" width={40} />
           <div>
             VISIT OUR LOCATION
             <br />
             <div>
               <p className="font-semibold">Head Office:</p>
-              <p>SCF-27, 2nd & 3rd Floor, Main Market, Sec- 13, Karnal </p>
+              <a
+                href="https://maps.app.goo.gl/xTj39N5UBWbEsAfVA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SCF-27, 2nd & 3rd Floor, Main Market, Sec- 13, Karnal
+              </a>
             </div>
             <p className="font-semibold">Branch Office:</p>
-            <p>167, Narsi Village, Sec- 32, Karnal</p>
+            <a
+              href="https://maps.app.goo.gl/xTj39N5UBWbEsAfVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              167, Narsi Village, Sec- 32, Karnal
+            </a>
           </div>
         </div>
+
         {/* Contact Section */}
-        <div className="flex items-center  gap-4 xl:mx-auto">
+        <div className="flex items-center gap-4 xl:mx-auto">
           <Icon width={40} icon="fluent:call-32-regular" />
           <div>
             <h3 className="text-lg font-semibold">GIVE US A CALL</h3>
-            <p>72064-27775, 94163-22655</p>
+            <p>
+              <a href="tel:7206427775" className="hover:underline">
+                72064-27775
+              </a>
+              ,{" "}
+              <a href="tel:9416322655" className="hover:underline">
+                94163-22655
+              </a>
+            </p>
             <p>(08:00 AM to 08:00 PM)</p>
           </div>
         </div>
 
         {/* Email Section */}
-        <div className=" flex items-center  gap-4 text-left xl:text-right">
+        <div className="flex items-center gap-4 text-left xl:text-right">
           <Icon icon="fluent:mail-32-regular" width={40} />
           <div>
             <h3 className="text-lg font-semibold">SEND US A MESSAGE</h3>
-            <p>sankhala.classes@gmail.com</p>
-            <p>onlinesankhalaclasses@gmail.com</p>
+            <p>
+              <a
+                href="mailto:sankhala.classes@gmail.com"
+                className="hover:underline"
+              >
+                sankhala.classes@gmail.com
+              </a>
+            </p>
+            <p>
+              <a
+                href="mailto:onlinesankhalaclasses@gmail.com"
+                className="hover:underline"
+              >
+                onlinesankhalaclasses@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -132,13 +161,16 @@ export function Footer() {
         <div className="flex flex-col">
           <p>© 2024 SANKHALA Classes. All Rights Reserved.</p>
           <p>
-            Crafted by <span className="font-bold">SoftwareGiant</span>
+            Crafted by{" "}
+            <a href="https://softwaregiant.in" className="font-bold">
+              SoftwareGiant
+            </a>
           </p>
         </div>
-        <div className="flex flex-col  gap-2">
+        <div className="flex flex-col gap-2">
           <div className="flex gap-4">
-            <Link href="privacypolicy"> Privacy Policy</Link>
-            <Link href="termscondition"> Terms & Conditions</Link>
+            <Link href="privacypolicy">Privacy Policy</Link>
+            <Link href="termscondition">Terms & Conditions</Link>
           </div>
           <div className="flex space-x-4">
             {/* Social Icons */}
@@ -167,7 +199,7 @@ export function Footer() {
               href="#"
               className="text-white bg-sky-500 rounded-full p-2 hover:bg-sky-600 transition-colors"
             >
-              <Icon icon="formkit:linkedin" />
+              <Icon icon="formkit:youtube" />
             </a>
           </div>
         </div>
