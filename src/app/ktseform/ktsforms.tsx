@@ -254,7 +254,7 @@ export default function ExamForm() {
                   id="school"
                   name="school"
                   className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all duration-300"
-                  onChange={(e) => {
+                  onChange={(e:any) => {
                     const selectedSchool = e.target.value;
 
                     // Find the school object that matches the selected school name

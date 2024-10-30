@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 interface KtseDialogCloseProps {
   imageSrc: StaticImageData; // Updated to accept StaticImageData
 }
@@ -29,7 +29,7 @@ export const KtseDialogClose: React.FC<KtseDialogCloseProps> = ({
           <DialogDescription>Screenshot of payment</DialogDescription>
         </DialogHeader>
         <div className="flex justify-center  w-full">
-          <img src={imageSrc.src} alt="icon" width="200" height="200" />
+          <Image src={imageSrc.src} alt="icon" width="200" height="200" />
         </div>
         <DialogFooter className="sm:justify-start">
           <DialogClose asChild>

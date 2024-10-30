@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 import axios from "axios";
 import toast, { Toast } from "react-hot-toast";
+import Image from "next/image";
 
 interface RootState {
   auth: {
@@ -109,7 +110,9 @@ const AdminSlides: React.FC = () => {
             {sliderData?.map((image, index) => (
               <div key={index} className="relative m-2">
                 <div className="h-40 w-96 cursor-pointer overflow-hidden transition-opacity hover:opacity-90">
-                  <img
+                  <Image
+                    width="300"
+                    height="300"
                     alt="slide"
                     className="h-full w-full object-cover object-center"
                     src={`http://localhost:8003/images/${image}`}
@@ -155,7 +158,9 @@ const AdminSlides: React.FC = () => {
                   </p>
                   <div className="relative w-96 m-2">
                     <div className="h-40 w-96 cursor-pointer overflow-hidden transition-opacity hover:opacity-90">
-                      <img
+                    <Image
+                    width="300"
+                    height="300"
                         alt="preview"
                         className="h-full w-full object-cover object-center"
                         src={scannerPreview}
