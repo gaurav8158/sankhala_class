@@ -9,22 +9,22 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const ViewAdmitCard: React.FC = () => {
   const contentRef = useRef<HTMLDivElement>(null);
-  const { searchParams } = new URL(window.location.href);
+  // const { searchParams } = new URL(window.location.href);
 
   // Get the values from the search parameters
-  const fullName = searchParams.get("fullName") || "";
-  const className = searchParams.get("className") || "";
-  const school = searchParams.get("school") || "";
-  const contact = searchParams.get("contact") || "";
-  const address = searchParams.get("address") || "";
-  const city = searchParams.get("city") || "";
-  const email = searchParams.get("email") || "";
+  // const fullName = searchParams.get("fullName") || "";
+  // const className = searchParams.get("className") || "";
+  // const school = searchParams.get("school") || "";
+  // const contact = searchParams.get("contact") || "";
+  // const address = searchParams.get("address") || "";
+  // const city = searchParams.get("city") || "";
+  // const email = searchParams.get("email") || "";
   const reactToPrintFn = useReactToPrint({ contentRef });
 
   return (
     <div>
       <button
-        onClick={reactToPrintFn} // Call handlePrint directly
+        onClick={() => reactToPrintFn()} // Wrap the function call in an anonymous function
         className="mt-4 flex items-center gap-2 rounded-xl bg-blue-500 text-white p-2 shadow-xl hover:bg-blue-600 hover:shadow-2xl mx-4"
       >
         <Icon icon="humbleicons:print" width="24" />
@@ -106,8 +106,8 @@ const ViewAdmitCard: React.FC = () => {
                     Address
                   </td>
                   <td className="border px-4 py-2">
-                    New Delhi, delhi District-delhi,
-                    State-New Delhi, Pincode-325200
+                    New Delhi, delhi District-delhi, State-New Delhi,
+                    Pincode-325200
                   </td>
                 </tr>
 
@@ -192,9 +192,9 @@ const ViewAdmitCard: React.FC = () => {
                 school exam coordinator for the exact timing.
               </li>
               <li>
-                *For 1st of December KTSE exam, the Morning shift will be
-                10:30 AM to 11:30 AM, and the Evening shift will be 4:00 PM to
-                5:00 PM.
+                *For 1st of December KTSE exam, the Morning shift will be 10:30
+                AM to 11:30 AM, and the Evening shift will be 4:00 PM to 5:00
+                PM.
               </li>
               <li>
                 Student will not be allowed to appear in the exam without Admit
