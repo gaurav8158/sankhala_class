@@ -7,7 +7,10 @@ import { Footer } from "@/components/Footer/page";
 import prizetop30 from "../../../Public/KTSE/prizetop30.png";
 import KtseFooter from "./ktsefooter";
 import NIFAAinfo from "./whatnifaa";
+import prizektse from "../../../Public/KTSE/prizektse.png";
 import KtseFAQ from "./faqktse";
+import { IntroductionSlider } from "./introductionslider";
+import Image from "next/image";
 const page = () => {
   return (
     <div>
@@ -17,9 +20,22 @@ const page = () => {
       </div> */}
       <div className=" min-h-screen ktsebackground py-10">
         <KTSEinfo />
-        <NIFAAinfo/>
+        <NIFAAinfo />
+        <IntroductionSlider />
         <ExamForm />
-        <KtseFAQ/>
+        <div className="relative w-full h-full">
+  <Image 
+    src={prizektse} 
+    alt="Prizektse" 
+ 
+    objectFit="cover" 
+    className="rounded-md w-full h-full" // Optional: apply rounded corners if needed
+  />
+</div>
+
+
+       
+        <KtseFAQ />
       </div>
 
       <KtseFooter />

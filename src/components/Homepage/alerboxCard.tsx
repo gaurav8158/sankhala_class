@@ -9,6 +9,7 @@ import ktselogo from "../../../Public/KTSE/ktselogos.jpeg";
 import whyktse from "../../../Public/KTSE/ktseprize.jpeg";
 import Image from "next/image";
 import Link from "next/link";
+import celibration from "../../../Public/Homepage/celibrationbg.png";
 import { Icon } from "@iconify/react/dist/iconify.js";
 export function AlertDialogDemo() {
   return (
@@ -19,6 +20,17 @@ export function AlertDialogDemo() {
       <AlertDialogContent className="bg-white p-0 ">
         <AlertDialogHeader className="m-0 p-0 ">
           <div className="relative  w-full  mx-auto bg-gradient-to-b from-purple-100 to-white p-6 rounded-lg shadow-lg">
+            <div className="absolute inset-0 flex flex-col gap-10 justify-center items-center opacity-50 pointer-events-none">
+              {/* First Logo */}
+              <Image
+                src={celibration}
+                alt="NIFAA Logo"
+                layout="fixed"
+                width={200}
+                height={200}
+                className="mx-2  w-[400px]"
+              />
+            </div>
             {/* Close Icon */}
             <AlertDialogCancel className="absolute top-2 p-2 rounded-xl bg-gradient-to-b from-purple-100 to-white right-2 text-gray-400 hover:text-gray-600">
               {" "}
@@ -26,7 +38,7 @@ export function AlertDialogDemo() {
             </AlertDialogCancel>
 
             {/* Logo and Title */}
-            <div className="flex items-center space-x-3">
+            <div className="flex  items-center space-x-3">
               <div className="bg-[#0068B4] text-white p-1 rounded">
                 <Link href="/">
                   <Image
@@ -57,7 +69,7 @@ export function AlertDialogDemo() {
             {/* Class Range */}
 
             {/* Graduation Cap Icon */}
-            <div className="flex flex-col lg:flex-row justify-between mt-4">
+            <div className="flex  flex-col lg:flex-row justify-between mt-4">
               <div className="mt-4 bg-[#0068B4] h-12 text-white text-xl max-w-[200px] flex items-center rounded-r-full px-4 ">
                 For classes 6-12
               </div>
